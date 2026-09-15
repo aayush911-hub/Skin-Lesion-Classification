@@ -1,15 +1,19 @@
 # loading files into a variable which can be used for the longer run
 
 # image root
-all_index_path = './release_v0/meta/all_indexes.csv'
+import os
+from pathlib import Path
 
-test_index_path = './release_v0/meta/test_indexes.csv'
-train_index_path = './release_v0/meta/train_indexes.csv'
+BASE_DIR= Path(__file__).resolve().parent
 
-val_index_path = './release_v0/meta/valid_indexes.csv'
+meta_dir= BASE_DIR / "release_v0" / "meta"
+source_dir= BASE_DIR / "release_v0" / "images"
 
-img_info_path = './release_v0/meta/meta.csv'
-source_dir = './release_v0/images/'
+all_index_path = meta_dir / "all_indexes.csv"
+test_index_path = meta_dir / "test_indexes.csv"
+train_index_path = meta_dir / "train_indexes.csv"
+val_index_path = meta_dir / "valid_indexes.csv"
+img_info_path = meta_dir / "meta.csv"
 
 
 """
